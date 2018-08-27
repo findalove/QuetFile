@@ -95,10 +95,16 @@ System.out.println(x);
         System.out.printf("\n| %-90s %7s", "123TGDĐ", "|"); 
         System.out.printf("\n| %-90s %7s", "2     -baitap.txt ", "|"); 
         System.out.printf("\n| %-90s %7s", "truongquocthang", "|"); 
-        System.out.printf("\n| %-90s %7s", "Menu: ", "|"); 
+        System.out.printf("\n|------------------------------------------------------------------- |");
+        System.out.printf("\n|--------------------------------------------------------------------|");
+        System.out.printf("\n");
+        
+        System.out.printf("\n\f\f\f\f| %-90s %7s", "Menu: ", "|"); 
         System.out.printf("\n| %-90s %7s", "1. Quet thu muc.", "|"); 
         System.out.printf("\n| %-90s %7s", "2. Tim kiem ký tự (TGDĐ) trong file thu muc", "|"); 
         System.out.printf("\n| %-90s %7s", "3. Ket thuc", "|"); 
+         System.out.printf("\n"); 
+        
         printLine(); 
         int chon=0;
          
