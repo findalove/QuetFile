@@ -1,7 +1,15 @@
 //------------------------------Chuong trinh duoc xay dung nhu sau : -------------------------------------
 // An so 1 : Chuong trinh se quet 1 thu muc chi dinh
-//AN so 2 : Chuong trinh se tim kiem noi dung(o day la tu khoa "123" trong tat ca cac file cua thu muc da chi dinh
+//AN so 2 : Chuong trinh se tim kiem noi dung(o day la tu khoa "TDGD" trong tat ca cac file cua thu muc da chi dinh
 //  VD o day la thu muc F:/DEMO - Neu noi  dung file nao co tu khoa 123 thi se hien ra ten file do
+//----------------------------------------------------------------------------------------------//
+//Giả sử thu mục là F:/DEMO
+//Sau khi quét ta đc : 
+//      1 ac.txt ----------------------------------> Sau khi tìm kiếm ký tự TGDD sẽ hiện ra file ac.txt
+//------123TGDĐ
+//      2-baitap.txt
+//------truongquocthang
+
 package baitapsearchstring;
 
 import java.io.BufferedReader;
@@ -82,9 +90,14 @@ System.out.println(x);
 
     public static void main(String[] args) throws IOException {  
          printLine(); 
+        System.out.printf("\n| %-90s %7s", "Giả sử thu mục là F:/DEMO ", "|");
+        System.out.printf("\n| %-90s %7s", "1     -ac.txt ", "|"); 
+        System.out.printf("\n| %-90s %7s", "123TGDĐ", "|"); 
+        System.out.printf("\n| %-90s %7s", "2     -baitap.txt ", "|"); 
+        System.out.printf("\n| %-90s %7s", "truongquocthang", "|"); 
         System.out.printf("\n| %-90s %7s", "Menu: ", "|"); 
         System.out.printf("\n| %-90s %7s", "1. Quet thu muc.", "|"); 
-        System.out.printf("\n| %-90s %7s", "2. Tim kiem String trong file thu muc", "|"); 
+        System.out.printf("\n| %-90s %7s", "2. Tim kiem ký tự (TGDĐ) trong file thu muc", "|"); 
         System.out.printf("\n| %-90s %7s", "3. Ket thuc", "|"); 
         printLine(); 
         int chon=0;
@@ -117,11 +130,11 @@ System.out.println(x);
         
                 break;
                     } 
-                    case 2: // Neu file nao co noi dung ben trong la "123" thi in ra ten file
+                    case 2: // Neu file nao co noi dung ben trong la "TGDD" thi in ra ten file
                     { 
                         ScanTimKiem main = new ScanTimKiem();
                         main.listFileTxt();
-                        main.filterFile("123"); //tim ky tu string co noi dung 123 trong   cac filefile
+                        main.filterFile("TGDD"); //tim ky tu string co noi dung TGDD trong   cac filefile
                         main.displayAllTxt();
 
                         break; 
